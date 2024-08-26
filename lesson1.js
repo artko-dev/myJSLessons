@@ -3,7 +3,7 @@
 let numberOfFilms;
 
 function start() {
-   numberOfFilms = +prompt('How many movies did you watched?', '');
+   numberOfFilms = +prompt('How many movies did you watched?', '').trim();
    while (numberOfFilms == '' || isNaN(numberOfFilms) || numberOfFilms == null) {
       numberOfFilms = +prompt('How many movies did you watched?', '');
    }
@@ -20,7 +20,7 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
    for (let i = 0; i < 2; i++) {
-      const a = prompt('Witch movie did you watch last time?', ''),
+      const a = prompt('Witch movie did you watch last time?', '').trim(),
             b = prompt('How many stars you can set for that movie?', '');
       if (a != null && b != null && a != '' && b != '' && a.length < 50) {
          personalMovieDB.movies[a] = b;

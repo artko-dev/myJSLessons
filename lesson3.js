@@ -1,3 +1,4 @@
+"use strict";
 function getMathResult(num, times) {
    if (typeof (times) !== 'number' || times <= 0) {
       return num;

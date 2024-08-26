@@ -1,3 +1,4 @@
+"use strict";
 function calculateVolumeAndArea(l) {
    //let square = (l * l) * 6;
    //let volume = l * l * l;
@@ -33,4 +34,4 @@ function numberOfPlace(seat) {
    return Math.ceil(seat / 4);
 }
 
-console.log(numberOfPlace(8))
+console.log(numberOfPlace(7.7));
