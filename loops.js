@@ -11,18 +11,27 @@ const obj = {
          first: 'yellow',
          second: 'grey',
       }
+   },
+   makeTest: function () {
+      console.log('Test');
    }
-}
+};
 
-//console.log(obj);
+obj.makeTest();
 
+console.log(Object.keys(obj).length);
+
+let counter = 0;
 
 for (let key in obj) {
    if (typeof (obj[key]) === 'object') {
       for (let i in obj[key]) {
          console.log(`Option ${i} equal ${obj[key][i]}`);
+         counter++;
       }
    } else {
-      console.log(`Option $[key] equal ${obj[key]}`);
+      console.log(`Option ${key} equal ${obj[key]}`);
+      counter++;
    }
 }
+console.log(counter);

@@ -35,3 +35,30 @@ function numberOfPlace(seat) {
 }
 
 console.log(numberOfPlace(7.7));
+
+
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // `this` указывает на объект Person
+  }, 1000);
+}
+
+var p = new Person();
+console.log(Person());
+
+const ivan = 'Noah';
+let o = {
+   august: ivan,
+   age: 15,
+};
+
+
+
+o[`august`] = `petr`; 
+
+console.log(ivan);
+console.log(o['august']);
+
+
